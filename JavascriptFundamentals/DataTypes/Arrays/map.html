@@ -19,10 +19,21 @@
         ]
         // TODO: don't create new array variable. Use inbuilt array methods
         // get all names of the employees 
-        // select all employees in marketing 
+        // select all employees in marketing department
         // find the various departments
+
+        let names = employees.map(employee => employee.name)
+        console.log(names)
+
+        let marketingEmployees = employees.filter(employee => employee.department === "Marketing")
+        console.log(marketingEmployees)
+        
+        let departments = employees.reduce((alc, currentEmployee) => alc.add(currentEmployee.department), new Set())
+        console.log([...departments])
+
+
 
     
     </script>
 </body>
-</html>
+</html>~
